@@ -1,5 +1,5 @@
 import './news.module.scss';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 /* eslint-disable-next-line */
 export interface NewsProps {}
@@ -42,4 +42,4 @@ export function News(props: NewsProps) {
   );
 }
 
-export default News;
+export default React.memo(News);

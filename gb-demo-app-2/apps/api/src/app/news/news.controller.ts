@@ -13,6 +13,7 @@ export class CreateNewsDto {
 @Controller('news')
 export class NewsController {
   @Get()
+  @Header('Cache-Control', 'max-age=60')
   async getNews() {
     return new Promise(resolve => {
       const news = Object.keys([...Array(20)])
